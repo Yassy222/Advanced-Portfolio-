@@ -6,33 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yassine Aden</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js"></script>
+
+
 <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init("Ibqd-v6XG9V6m1JiS");
+})();
+</script>
 </head>
 <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
-                <img id="personal-logo" src="./assets/Logo YA.webp" alt="">
+                <img id="personal-logo" src="./assets/Logo YA.webp" alt="" onclick="toggleModal()">
             </figure>
+        
             <ul class="nav__link--list">
-                <li class="nav__link">
+                
+                <li class="nav__link click" onclick="toggleModal()">
                 <a href="#" class=
                 "nav__link--anchor
                 link__hover-effect
                 link__hover-effect--black"
                 >About</a>
-            </li>
+                </li>
 
-                <li class="nav__link">
-                    <a href="#" class=
+                <li class="nav__link click">
+                    <a href="#projects" class=
                     "nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black"
                     >Projects</a>
                 </li>
 
-                    <li class="nav__link">
+                    <li class="nav__link click" onclick="toggleModal()">
                         <a href="#" class=
                         "nav__link--anchor
                         link__hover-effect
@@ -40,21 +52,25 @@
                         >Contact</a>
                     </li>
 
-                        <li class="nav__link">
+
+                        <li class="nav__link click" onclick="toggleContrast()">
                             <a href="#" class=
                             "nav__link--anchor
                             link__hover-effect
                             link__hover-effect--black"
+                            
                             ><i class="fas fa-adjust"></i></a>
-            </li>
+                         </li>
+                        
             </ul>
         </nav>
 
         <header class="header">
             <div class="header__content">
-                <h1 class="title hey__title">Hey</h1>
-                <h1 class="title title--secondary">I'm Yassine.</h1>
-                <p class="header__para">I'm Yassine, a <b class="green">Frontend Software Engineer</b>  with a strong passion for <br> crafting modern web applications with an emphasis on both aesthetics <br>
+                <h1 class=" title title__hey--title">Hi,</h1>
+                <h1 class="title title--secondary">I'm Yassine <span class="wave" 
+                    >👋</span> </h1>
+                <p class="header__para">I'm Yassine, a <b class="green" onclick="toggleModal()"> Frontend Software Engineer</b>  with a strong passion for <br> crafting modern web applications with an emphasis on both aesthetics <br>
                      and function. 
                     I strive to build high quality, meaningful software that <br> positively impacts people and the world around us. <br> <b class="green">Here's more about me!</b>  
                 </p>
@@ -70,13 +86,213 @@
                                 <i class="fab fa-github"></i></a>
 
                                 <div class="social__list">
-                                    <a href="./assets/2023 New Frontend CV .docx" class=" social__link click">
+                                    <a href="./assets/2023 New Frontend CV .docx"  target="_blank" class=" social__link click">
                                         <i class="fas fa-file"></i>
                     </a>
-                </div>
+                
             </div>
 
         </header>
+        <a href="#"></a>
+        <button class="mail__btn click" onclick="toggleModal()">
+            <i class="fas fa-envelope"></i>
+        </button>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click">
+
+            </div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about"> 
+                <h3 class="modal__title modal__title--about"> Here's Abit About Me! </h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+                <p class="modal__para">Using my knowledge of <b class="green">HTML, CSS, JavaScript & React, </b>  I have crafted a visually appealing design <br>
+                     that is both <b class="green">modern and functional. </b>  I've incorporated best practices for  web design, <br>
+                      including <b class="green"> responsive design principles and mobile-first development,</b> to ensure that <br>
+                       the application looks great and performs flawlessly <b class="green"> across different devices and screen sizes. </b>
+                    </p>
+                    <div class="modal__languages">
+                        <figure class="modal__language" >
+                            <img class="modal__language--img" src="./assets/HTML IMG 1.png" alt="">
+                            <span class="language__name" language__1">HTML</span>
+                        </figure>
+                        <figure class="modal__language" > 
+                            <img class="modal__language--img" src="./assets/css image 1.png" alt="">
+                            <span class="language__name" language__1">CSS</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/JAVASCRIPT IMG 1.png" alt="">
+                            <span class="language__name" ">JavaScript</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/React-icon 1 .png" alt="">
+                            <span class="language__name" language__2">React</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img  class="modal__language--img" src="./assets/vue img 1.png" alt="">
+                            <span class="language__name">Vue</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/typescript img 1.png" alt="">
+                            <span class="language__name"">TypeScrpit</span>
+                        </figure>
+                    </div>
+            </div>  
+            <div class="modal__half modal__contact"> 
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+              <h3 lass="modal__title mofal__title--contact">Let's Have A Chat!</h3>
+              <h4 class="modal__sub-title modal__sub-title--contact">
+                I'd Love to hear from you! 
+              </h4>
+              <form id="contact__form" onsubmit="contact(event)">
+                <div class="form__item">
+                    <label class="form__item" for="name">Name</label>
+                    <input class="input "name="user_name" type="text" required></input>
+                </div>
+                <div class="form__item">
+                    <label class="form__item" for="email">Email</label>
+                    <input class="input "name="user_email" type="email" required></input>
+                </div>
+                <div class="form__item">
+                    <label class="form__item" for="message">Message</label>
+                    <textarea class="input "name="message" type="text" required></textarea>
+                </div>
+             
+                <button id="contact__submit" class="form__submit">
+                    Send it my way!
+                </button>
+              </form>
+
+              <div class="modal__overlay modal__overlay--loading">
+                <i class="fas fa-spinner"></i>
+              </div>
+              <div class="modal__overlay modal__overlay--success">
+                Thanks! Look forward to speaking to you soon.
+              </div>
+            </div>
+    
+        </div>
+        <img src="./assets/semi circle.svg" class="shape shape--0">
+        <img src="./assets/circle.svg" class="shape shape--1">
+        <img src=".//assets/squiggly.svg" class="shape shape--2">
+        <img src="./assets/triangle.svg" class="shape shape--3">
+        <img src="./assets/circle.svg" class="shape shape--4">
+        <img src="./assets/squiggly.svg" class="shape shape--5">
+        <img src="./assets/semi circle.svg" class="shape shape--6">
+        <img src="./assets/triangle.svg" class="shape shape--7">
+        <img src="./assets/circle.svg" class="shape shape--8">
+        <img src="./assets/triangle.svg" class="shape shape--9">
     </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+
+                <h1 class="section__title">
+                    Here are some of my  <span class="green
+                    ">Projects</span> 
+                    <ul class="project__list">
+                        <li class="project">
+                            <div class="project__wrapper">
+                                <img class="project__img" src="./assets/blinker mockup.png" alt="">
+                                <div class="project__wrapper--bg"></div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title"> T-React Project</h3>
+                                    <h4 class="project__description--sub-title"> HTML & CSS </h4>
+                                    <p class="project__description--para">Introducing T-react: the sleek new website I built from scratch with HTML and CSS. Experience seamless browsing and stunning design - all at your fingertips!</p>
+                                    <div class="project__description--links">
+                                        <a href="https://github.com/Yassy222" class="project__description--link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="" class="project__description--link">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project__wrapper">
+                                <img class="project__img" src="./assets/james-harrison-vpOeXr5wmR4-unsplash.jpg" alt="">
+                                <div class="project__wrapper--bg"></div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title"> E-Commerce Website</h3>
+                                    <h4 class="project__description--sub-title"> HTML, CSS and <span class="blue">Javascript</span> </h4>
+                                    <p class="project__description--para">Introducing my new e-commerce site for book lovers! With HTML, CSS & Javascript I've created an immersive online experience that makes shopping for books easier and more fun than ever before. Browse thousands of titles, read reviews, and find your next literary obsession with just a few clicks!</p>
+                                    <div class="project__description--links">
+                                        <a href="https://github.com/Yassy222" class="project__description--link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="#" class="project__description--link">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project__wrapper">
+                                <img class="project__img" src="./assets/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg" alt="">
+                                <div class="project__wrapper--bg"></div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title"> Potfolio</h3>
+                                    <h4 class="project__description--sub-title"> HTML & CSS </h4>
+                                    <p class="project__description--para">Check out my portfolio website! Built with HTML and CSS, it showcases my design work and experience in an easy-to-navigate layout. Explore my projects and learn more about my skills and achievements. Let's work together on your next project!</p>
+                                    <div class="project__description--links">
+                                        <a href="https://github.com/Yassy222" class="project__description--link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="#" class="project__description--link">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </h1>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container footer__container">
+            <div class="row footer__row">
+
+            
+            <figure>
+                <img src="./assets/Logo YA.webp" onclick="toggleModal()" class="footer__img1" alt="" onclick="toggleModal()">
+            </figure>
+            <div class="footer__social--list">
+                <a href="https://github.com/Yassy222" class="
+                footer__social--link 
+                link__hover-effect 
+                link__hover-effect--white
+                ">
+                Github
+
+                <a href="https://www.linkedin.com/in/yassine-aden-02639a162/" class="
+                footer__social--link 
+                link__hover-effect 
+                link__hover-effect--white
+                ">
+                Linkdin
+
+                <a href="./assets/2023 New Frontend CV .docx" target="_blank" class="
+                footer__social--link 
+                link__hover-effect 
+                link__hover-effect--white
+                ">
+                Resume
+
+                <a href="#" onclick="toggleModal()" class="
+                footer__social--link 
+                link__hover-effect 
+                link__hover-effect--white" 
+                >
+                Contact
+            </a>
+            </div>
+            <div class="footer__copyright">Copyright © Yassine Aden 2023</div>
+        </div>
+        </div>
+    </footer>
 </body>
 </html>
